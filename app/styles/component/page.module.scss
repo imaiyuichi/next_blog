@@ -1,3 +1,11 @@
+@use "../variables" as *;
+@use "../functions" as *;
+@use "../mixins" as *;
+
 .test {
   color: red;
+
+  @include sp() {
+    color: blue;
+  }
 }

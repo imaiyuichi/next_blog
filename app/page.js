@@ -1,29 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
-// import style from "@/app/styles/component/page.module.scss";
+import Blog from "@/app/components/BlogArticle";
+import Mv from "@/app/partials/IndexMv";
+import style from "@/app/styles/component/page.module.scss";
 
-export default function Top() {
+export default function Home() {
   const test = [
     {
-      name: "test",
-      last: "test2",
+      name: "top",
+      boolean: false,
     },
     {
-      name: "test",
-      last: "test2",
+      name: "bottom",
+      boolean: true,
     },
   ];
 
   return (
     <>
-      <div>
+      <div className={style.test}>
         <Link href="about">Linkタグ about</Link>
       </div>
       <div>
         <a href="about">aタグ about</a>
       </div>
+      <Blog />
+      <Mv />
       {test.map((item, index) => {
-        return <p key={index}>{item.name}</p>;
+        return (
+          <>
+            <p key={index}>{item.name}</p>
+            {item.boolean && <p>{item.name}</p>}
+          </>
+        );
       })}
       <div>
         <Image
