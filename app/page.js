@@ -24,16 +24,19 @@ export default function Home() {
       <div>
         <a href="about">aタグ about</a>
       </div>
+      <p>--------------------</p>
       <Blog />
+      <p>--------------------</p>
       <Mv />
-      {test.map((item, index) => {
+      <p>--------------------</p>
+      {/* {test.map((item, index) => {
         return (
           <>
             <p key={index}>{item.name}</p>
             {item.boolean && <p>{item.name}</p>}
           </>
         );
-      })}
+      })} */}
       <div>
         <Image
           src="/images/next.png"
