@@ -1,24 +1,16 @@
-import { client } from "@/app/libs/client";
+import { client } from '@/app/libs/client';
 
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
+export default async function Blog({ blog }) {
+  const data = await client.get({ endpoint: 'blogs' });
 
-  return {
-    props: {
-      blog: data,
-    },
-  };
-};
-
-export default function Blog({ blog }) {
   return (
     <div>
       <ul>
-        {/* {blogs.map((blog) => (
+        {data.contents.map((blog) => (
           <li key={blog.id}>
             <a href="">{blog.title}</a>
           </li>
-        ))} */}
+        ))}
       </ul>
     </div>
   );

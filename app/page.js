@@ -1,17 +1,17 @@
-import Link from "next/link";
-import Image from "next/image";
-import Blog from "@/app/components/BlogArticle";
-import Mv from "@/app/partials/IndexMv";
-import style from "@/app/styles/component/page.module.scss";
+import Link from 'next/link';
+import Image from 'next/image';
+import Blog from '@/app/components/BlogArticle';
+import Mv from '@/app/partials/IndexMv';
+import style from '@/app/styles/component/page.module.scss';
 
 export default function Home() {
   const test = [
     {
-      name: "top",
+      name: 'top',
       boolean: false,
     },
     {
-      name: "bottom",
+      name: 'bottom',
       boolean: true,
     },
   ];
