@@ -1,0 +1,31 @@
+{
+  "name": "next_blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --ignore-path .gitignore",
+    "lint:fix": "next lint --ignore-path .gitignore --fix",
+    "lint:style": "stylelint --ignore-path .gitignore './**/*.{css,scss}'",
+    "lint:style:fix": "stylelint --ignore-path .gitignore --fix './**/*.{css,scss}'",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'"
+  },
+  "dependencies": {
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@markuplint/jsx-parser": "^3.10.0",
+    "@markuplint/react-spec": "^3.11.0",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "markuplint": "^3.13.0",
+    "sass": "^1.69.3"
+  },
+  "volta": {
+    "node": "18.17.1"
+  }
+}

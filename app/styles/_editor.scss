@@ -1,0 +1,406 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+.editor {
+  position: relative;
+  margin: 55px 0 0;
+
+  @include sp() {
+    margin: 6.666rem 0 0;
+  }
+
+  h2 {
+    position: relative;
+    width: fit-content;
+    margin: 42px 0 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+
+    @include sp() {
+      margin: 4.566rem 0 0;
+      line-height: 1.9;
+      font-size: vw_sp(24);
+    }
+
+    .border {
+      padding: 0 0 6px;
+      background: linear-gradient(
+        transparent calc(100% - 4px),
+        $color-base-black 4px
+      );
+
+      @include sp() {
+        padding: 0 0 0.6rem;
+        background: linear-gradient(
+          transparent calc(100% - 0.5rem),
+          $color-base-black 0.5rem
+        );
+      }
+    }
+  }
+
+  h3 {
+    position: relative;
+    width: fit-content;
+    margin: 40px 0 0;
+    padding: 0 0 0 11px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 3px;
+      height: calc(100% + -6px);
+      background-color: $color-base-black;
+
+      @include sp() {
+        top: 0.333rem;
+        width: vw_sp(3);
+        width: 0.5rem;
+        height: 4.166rem;
+      }
+    }
+
+    @include sp() {
+      margin: 6.333rem 0 0;
+      padding: 0 0 0 1.833rem;
+      font-size: vw_sp(18);
+    }
+  }
+
+  h4 {
+    margin: 40px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+
+    @include sp() {
+      margin: 6.333rem 0 0;
+      font-size: vw_sp(16);
+    }
+  }
+
+  p {
+    margin: 33px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    letter-spacing: 0;
+
+    @include sp() {
+      margin: 3.6rem 0 0;
+      font-size: vw_sp(12);
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      color: $color-base-blue;
+      border-bottom: 1px solid $color-base-blue;
+      text-decoration: none;
+    }
+
+    u {
+      border-bottom: 1px solid $color-base-black;
+      text-decoration: none;
+    }
+
+    .marker {
+      z-index: 1;
+      position: relative;
+      display: inline;
+      padding: 0 0 0.08rem;
+      word-break: break-all;
+      background: linear-gradient(
+        transparent calc(100% - 6px),
+        $color-yellow-marker 6px
+      );
+    }
+
+    .colorRed {
+      color: $color-base-red;
+    }
+  }
+
+  hr {
+    margin: 40px 0 0;
+
+    @include sp() {
+      margin: 6rem 0 0;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    padding: 0 0 0 26.4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    letter-spacing: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $color-border-gray;
+
+      @include sp() {
+        width: vw_sp(3);
+      }
+    }
+
+    @include sp() {
+      padding: 0 0 0 2.5rem;
+      font-size: vw_sp(13);
+    }
+  }
+
+  ol {
+    margin: 40px 0 0;
+    padding: 0 0 0 18.36px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    letter-spacing: 0;
+    list-style: decimal;
+
+    @include sp() {
+      margin: 6rem 0 0;
+      padding: 0 0 0 2.666rem;
+      font-size: vw_sp(12);
+    }
+  }
+
+  ul {
+    margin: 40px 0 0;
+    padding: 0 0 0 18.36px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    letter-spacing: 0;
+    list-style-type: disc;
+
+    @include sp() {
+      margin: 6rem 0 0;
+      padding: 0 0 0 2.666rem;
+      font-size: vw_sp(12);
+    }
+
+    ::marker {
+      font-size: 16px;
+
+      @include sp() {
+        font-size: vw_sp(12);
+      }
+    }
+  }
+
+  figure {
+    display: block;
+    max-width: 600px;
+    margin: 40px auto 0;
+
+    @include sp() {
+      width: 100%;
+      margin: 6rem auto 0;
+    }
+  }
+
+  figcaption {
+    margin: 5px 0 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+
+    @include sp() {
+      margin: 1.833rem 0 0;
+      font-size: vw_sp(11);
+    }
+  }
+
+  .iframeWrapper {
+    width: 600px;
+    margin: 60px auto 0;
+
+    @include sp() {
+      width: 100%;
+      margin: 6.666rem auto 0;
+    }
+  }
+
+  table {
+    margin: 60px 0 0;
+
+    @include sp() {
+      margin: 6.666rem 0 0;
+    }
+
+    th,
+    td {
+      padding: 1rem;
+      font-size: 16px;
+      line-height: 1.875;
+      border: 1px solid $color-border-gray;
+      min-width: calc(696px / 4);
+
+      @include sp() {
+        font-size: vw_sp(16);
+      }
+    }
+
+    th {
+      background-color: $color-bg-gray-light;
+
+      p {
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .table {
+    @include sp() {
+      margin: 0 -5rem;
+      padding: 0 5rem;
+      overflow-x: scroll;
+    }
+  }
+
+  .cvSection {
+    margin: 40px 0 0;
+    padding: 36px 85px;
+    border: 1px solid $color-base-gray;
+    border-radius: 10px;
+
+    @include sp() {
+      margin: 6.666rem 0 0;
+      padding: 5rem 3rem;
+      border-radius: 1.666rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .buttonWrapper {
+    text-align: center;
+
+    @include not_sp() {
+      margin: 60px auto 0;
+      min-width: 296px;
+      width: fit-content;
+      height: 58px;
+    }
+
+    @include sp() {
+      margin: 6.666rem auto 0;
+      height: 9.333rem;
+    }
+  }
+
+  .colorSection {
+    margin: 40px 0 0;
+    padding: 40px 48px;
+    text-align: center;
+
+    @include sp() {
+      margin: 6.666rem 0 0;
+      padding: 6.666rem 8rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .content2LeftImageWrapper,
+  .content2LeftTextWrapper {
+    @include not_sp() {
+      display: grid;
+      grid-template: auto / 372px;
+      gap: 0 24px;
+      margin: 42px 0 0;
+
+      .leftImage {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+      }
+
+      .rightHeading {
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .rightText {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+      }
+
+      .leftHeading {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .leftText {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      .rightImage {
+        grid-column: 2 / 2;
+        grid-row: 1 / 3;
+      }
+
+      .leftHeading,
+      .rightHeading {
+        h2,
+        h3,
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+
+    @include sp() {
+      display: flex;
+      flex-direction: column;
+
+      .leftHeading,
+      .rightHeading {
+        order: 1;
+      }
+
+      .leftImage,
+      .rightImage {
+        order: 2;
+        margin: 6.5rem 0 0;
+      }
+
+      .rightText,
+      .leftText {
+        order: 3;
+        width: 100%;
+      }
+    }
+  }
+}
