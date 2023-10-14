@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Blog from '@/app/components/BlogArticle';
 import Mv from '@/app/partials/IndexMv';
 import style from '@/app/styles/component/page.module.scss';
-import About from '@/app/components/about';
+import About from '@/app/components/About';
 
 export default function Home() {
   const test = [
@@ -21,12 +21,13 @@ export default function Home() {
     },
   ];
 
+  console.log(test);
   return (
     <>
-      { test.map((item, index) => {
-        <About key={item.index} src={item.src} text={item.text}/>
-      })
-      }
+      {test.map((item, index) => {
+        return <About key={item.index} src={item.src} text={item.text} />;
+      })}
+      <About src="/images/next.png" text="しげた" />
       <div className={style.test}>
         <Link href="about">Linkタグ about</Link>
       </div>
