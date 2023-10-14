@@ -1,14 +1,26 @@
 import { client } from '@/app/libs/client';
+import Link from 'next/link';
 
-export default async function Blog({ blog }) {
-  const data = await client.get({ endpoint: 'blogs' });
+async function getContents() {
+  const response = await client.getList({
+    customRequestInit: {
+      cache: 'no-store',
+    },
+    endpoint: 'blogs',
+  });
+
+  return response.contents;
+}
+
+export default async function Blog() {
+  const data = await getContents();
 
   return (
     <div>
       <ul>
-        {data.contents.map((blog) => (
+        {data.map((blog) => (
           <li key={blog.id}>
-            <a href="">{blog.title}</a>
+            <Link href={`blog/${blog.id}`}>{blog.title}</Link>
           </li>
         ))}
       </ul>

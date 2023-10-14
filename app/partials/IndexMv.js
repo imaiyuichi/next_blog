@@ -1,7 +1,19 @@
 import { client } from '@/app/libs/client';
 
+async function getContents() {
+  const response = await client.getList({
+    customRequestInit: {
+      cache: 'no-store',
+    },
+    endpoint: 'top',
+  });
+
+  return response;
+}
+
 export default async function Mv() {
-  const data = await client.get({ endpoint: 'top' });
+  const data = await getContents();
+
   return (
     <div>
       <div>{data.MvTitle}</div>
