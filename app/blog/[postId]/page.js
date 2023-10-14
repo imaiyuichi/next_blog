@@ -16,7 +16,6 @@ async function generateStaticParams() {
     };
   });
 
-  console.log(paths);
   return paths;
 }
 
