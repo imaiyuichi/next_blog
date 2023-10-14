@@ -3,21 +3,30 @@ import Image from 'next/image';
 import Blog from '@/app/components/BlogArticle';
 import Mv from '@/app/partials/IndexMv';
 import style from '@/app/styles/component/page.module.scss';
+import About from '@/app/components/about';
 
 export default function Home() {
   const test = [
     {
-      name: 'top',
-      boolean: false,
+      src: '/images/next.png',
+      text: 'なかやま',
     },
     {
-      name: 'bottom',
-      boolean: true,
+      src: '/images/next.png',
+      text: 'いまい',
+    },
+    {
+      src: '/images/next.png',
+      text: 'しげた',
     },
   ];
 
   return (
     <>
+      { test.map((item, index) => {
+        <About key={item.index} src={item.src} text={item.text}/>
+      })
+      }
       <div className={style.test}>
         <Link href="about">Linkタグ about</Link>
       </div>
