@@ -15,7 +15,7 @@ $design-size: (
 );
 
 // colors
-$color-base-white: #fff;
+$color-base-white: #ffffff;
 $color-base-black: #212121;
 $color-base-gray: #6a6a6a;
 $color-base-red: #df4949;
@@ -24,7 +24,7 @@ $color-base-green: #42c57e;
 $color-base-yellow: #f6ac19;
 $color-bg-black: #333333;
 $color-bg-gray-light: #f8f8f8;
-$color-bg-gray-dark: #666;
+$color-bg-gray-dark: #666666;
 $color-border-gray: #c8c8c8;
 $color-border-gray-02: #d9d9d9;
 $color-tag-gray: #7d7d7d;
@@ -34,14 +34,8 @@ $color-font-gray-light-02: #f8f8f8;
 $color-sns-gray: #bcbcbc;
 $color-yellow-marker: #e9f651;
 
-// shadow
-$shadow-base: 10px 10px 20px 0px rgba(200, 200, 200, 0.05);
-$shadow-top: 0 40px 60px rgb(18 113 142 / 24%);
-$shadow-occupation: 0 10px 40px 0 rgb(153 211 239 / 10%);
-$shadow-works-environment: 0 0 50px rgb(28 105 129 / 10%);
-
 // fonts
-$font-family-notosan: "Noto Sans JP", "游ゴシック", YuGothic,
+$font-family-notosan: "Noto Sans JP", "游ゴシック", yugothic,
   "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
 
 // animations

@@ -21,7 +21,7 @@
     "function-no-unknown": [
       true,
       {
-        "ignoreFunctions": ["/^map\\..+/", "/^color\\..+/"]
+        "ignoreFunctions": ["/^map\\..+/", "vw_sp"]
       }
     ],
     "at-rule-no-unknown": null,

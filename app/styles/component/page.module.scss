@@ -3,15 +3,10 @@
 @use "../mixins" as *;
 
 .test {
-  color: red;
-
   display: block;
+  color: red;
 
   @include sp() {
     color: blue;
   }
-}
-
-.test {
-  color: red;
 }
