@@ -13,9 +13,19 @@
     "scss/operator-no-unspaced": null,
     "no-descending-specificity": null,
     "color-hex-length": "long",
-    "selector-class-pattern": null,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9-]+$",
+    "selector-id-pattern": "^[A-Z][a-zA-Z0-9_-]+$",
     "selector-pseudo-element-no-unknown": null,
-    "prettier/prettier": null
+    "prettier/prettier": null,
+    "color-function-notation": "legacy",
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["/^map\\..+/", "/^color\\..+/"]
+      }
+    ],
+    "at-rule-no-unknown": null,
+    "scss/dollar-variable-pattern": "^(([a-z][a-zA-Z0-9_]+)|([a-z][a-z0-9]*)(-[a-zA-Z0-9_]+)*)$"
   },
-  "ignoreFiles": ["node_modules/", "src/styles/base/_destyle.scss"]
+  "ignoreFiles": ["node_modules/", "app/**/_destyle.scss"]
 }

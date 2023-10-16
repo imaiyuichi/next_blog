@@ -5,7 +5,13 @@
 .test {
   color: red;
 
+  display: block;
+
   @include sp() {
     color: blue;
   }
+}
+
+.test {
+  color: red;
 }
