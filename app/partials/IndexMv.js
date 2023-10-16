@@ -1,11 +1,11 @@
-import { client } from '@/app/libs/client';
+import { client } from "@/app/libs/client";
 
 async function getContents() {
   const response = await client.getList({
     customRequestInit: {
-      cache: 'no-store',
+      cache: "no-store",
     },
-    endpoint: 'top',
+    endpoint: "top",
   });
 
   return response;

@@ -1,39 +1,35 @@
-import Link from 'next/link';
-import { client } from '@/app/libs/client';
+import Link from "next/link";
+import { client } from "@/app/libs/client";
+import Image from "next/image";
 
 async function getContents() {
   const response = await client.getList({
-    customRequestInit: {
-      cache: 'no-store',
-    },
-    endpoint: 'blogs',
+    endpoint: "blogs",
   });
 
   return response.contents;
 }
 
 export default async function StaticPage() {
-  const { contents } = await getContents();
-
-  // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
-
-  if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>;
-  }
+  const data = await getContents();
 
   return (
     <div>
-      <h1>{time}</h1>
-      <ul>
-        {contents.map((post) => {
-          return (
-            <li key={post.id}>
-              <Link href={`/static/${post.id}`}>{post.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      {data.map((item, index) => {
+        return (
+          <div key={item.id}>
+            <h2>{item.title}</h2>
+            <div>
+              <Image
+                src={item.eyecatch.url}
+                width={item.eyecatch.width}
+                height={item.eyecatch.height}
+                alt=""
+              />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
