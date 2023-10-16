@@ -79,3 +79,19 @@ Lint はプリコミット時に必ず実行されます。<br>
 - [markuplint](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint)
 - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+## 🥳 Style
+
+以下3つを読み込む
+- @use "../variables" as *;
+- @use "../functions" as *;
+- @use "../mixins" as *;
+
+# 🤫 Rule
+
+基本的には入れ子にしない。
+  
+入れ子として許可するもの
+- mixins 例) @include sp()
+- modifierのdata属性 例)[data-style="pć"]
+- 擬似要素
