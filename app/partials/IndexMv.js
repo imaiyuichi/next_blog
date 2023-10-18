@@ -11,7 +11,7 @@ async function getContents() {
   return response;
 }
 
-const Mv = async () => {
+export default async function Mv() {
   const data = await getContents();
 
   return (
@@ -21,6 +21,4 @@ const Mv = async () => {
       <div>{data.MvCatch}</div>
     </div>
   );
-};
-
-export default Mv;
+}

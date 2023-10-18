@@ -1,7 +1,7 @@
 import Link from "next/link";
 import AboutMe from "@/app/components/AboutMe";
 
-const IndexAbout = () => {
+export default function IndexAbout() {
   const test = [
     {
       src: "/images/next.png",
@@ -27,6 +27,4 @@ const IndexAbout = () => {
       </div>
     </div>
   );
-};
-
-export default IndexAbout;
+}
