@@ -7,7 +7,7 @@ const Home = () => {
     <main>
       <Mv />
       <IndexAbout />
-      {/* <Blog /> */}
+      <Blog />
     </main>
   );
 };
