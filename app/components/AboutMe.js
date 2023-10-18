@@ -1,6 +1,6 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-export default function About({ src, text }) {
+const AboutMe = async ({ src, text }) => {
   return (
     <div>
       <div>
@@ -11,4 +11,6 @@ export default function About({ src, text }) {
       </div>
     </div>
   );
-}
+};
+
+export default AboutMe;
