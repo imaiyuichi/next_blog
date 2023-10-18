@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getBlog } from "@/app/libs/client";
 import Image from "next/image";
 
-export default async function StaticPage() {
+const StaticPage = async () => {
   const data = await getBlog();
 
   return (
@@ -24,4 +24,6 @@ export default async function StaticPage() {
       })}
     </div>
   );
-}
+};
+
+export default StaticPage;
