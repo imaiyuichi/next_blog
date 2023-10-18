@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --ignore-path .gitignore",
-    "lint:fix": "next lint --ignore-path .gitignore --fix",
     "style": "stylelint --ignore-path .gitignore './**/*.scss'",
-    "style:fix": "stylelint --ignore-path .gitignore --fix './**/*.scss'",
+    "lint:fix": "stylelint --ignore-path .gitignore --fix './**/*.scss' &&  next lint --ignore-path .gitignore --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'",
     "prepare": "husky install"
   },
