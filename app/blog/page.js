@@ -6,7 +6,6 @@ async function getContents() {
   const response = await client.getList({
     endpoint: "blogs",
   });
-
   return response.contents;
 }
 

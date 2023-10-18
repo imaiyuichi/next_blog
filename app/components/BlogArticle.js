@@ -1,12 +1,12 @@
-import { client } from '@/app/libs/client';
-import Link from 'next/link';
+import { client } from "@/app/libs/client";
+import Link from "next/link";
 
 async function getContents() {
   const response = await client.getList({
     customRequestInit: {
-      cache: 'no-store',
+      cache: "no-store",
     },
-    endpoint: 'blogs',
+    endpoint: "blogs",
   });
 
   return response.contents;
