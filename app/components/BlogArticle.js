@@ -1,19 +1,8 @@
-import { client } from "@/app/libs/client";
+import { getBlog } from "@/app/libs/client";
 import Link from "next/link";
 
-async function getContents() {
-  const response = await client.getList({
-    customRequestInit: {
-      cache: "no-store",
-    },
-    endpoint: "blogs",
-  });
-
-  return response.contents;
-}
-
-export default async function Blog() {
-  const data = await getContents();
+const Blog = async () => {
+  const data = await getBlog();
 
   return (
     <div>
@@ -26,4 +15,6 @@ export default async function Blog() {
       </ul>
     </div>
   );
-}
+};
+
+export default Blog;

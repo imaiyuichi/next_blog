@@ -1,0 +1,17 @@
+@use "../variables" as *;
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.root {
+  width: vw(400);
+  padding: vw(20);
+}
+
+.root + .root {
+  margin: vw(50) 0 0;
+}
+
+.text {
+  font-size: vw(20);
+  font-weight: 700;
+}

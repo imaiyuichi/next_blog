@@ -1,18 +1,7 @@
-import { client } from "@/app/libs/client";
+import { getTop } from "@/app/libs/client";
 
-async function getContents() {
-  const response = await client.getList({
-    customRequestInit: {
-      cache: "no-store",
-    },
-    endpoint: "top",
-  });
-
-  return response;
-}
-
-export default async function Mv() {
-  const data = await getContents();
+const Mv = async () => {
+  const data = await getTop();
 
   return (
     <div>
@@ -21,4 +10,6 @@ export default async function Mv() {
       <div>{data.MvCatch}</div>
     </div>
   );
-}
+};
+
+export default Mv;
