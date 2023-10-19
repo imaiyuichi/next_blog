@@ -35,7 +35,7 @@ const IndexAbout = async () => {
   ];
 
   return (
-    <div>
+    <section>
       {aboutMe.map((item, index) => {
         return (
           <div key={item.index} className={style.root}>
@@ -53,7 +53,7 @@ const IndexAbout = async () => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 
