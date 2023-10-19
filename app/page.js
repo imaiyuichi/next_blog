@@ -1,14 +1,14 @@
 import Blog from "@/app/components/BlogArticle";
 import Mv from "@/app/partials/IndexMv";
 import IndexAbout from "@/app/partials/IndexAbout";
-import IndexSkils from "@/app/partials/IndexSkils";
+import IndexSkills from "@/app/partials/IndexSkills";
 
 const Home = () => {
   return (
     <main>
       <Mv />
       <IndexAbout />
-      <IndexSkils />
+      <IndexSkills />
       <Blog />
     </main>
   );
