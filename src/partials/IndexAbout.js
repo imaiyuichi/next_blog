@@ -1,7 +1,7 @@
 import Link from "next/link";
 import AboutMe from "@/src/components/AboutMe";
 import Image from "next/image";
-import style from "@/app/styles/partials/IndexAbout.module.scss";
+import style from "@/src/styles/partials/IndexAbout.module.scss";
 
 import { getTop } from "@/src/libs/client";
 
