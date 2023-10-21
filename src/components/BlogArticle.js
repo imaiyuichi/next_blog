@@ -7,8 +7,8 @@ const Blog = async () => {
   return (
     <div>
       <ul>
-        {data.map((blog) => (
-          <li key={blog.id}>
+        {data.map((blog, index) => (
+          <li key={index}>
             <Link href={`blog/${blog.id}`}>{blog.title}</Link>
           </li>
         ))}

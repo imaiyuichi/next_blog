@@ -13,6 +13,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="ja">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/bmd1pfz.css" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

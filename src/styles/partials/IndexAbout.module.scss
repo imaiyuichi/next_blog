@@ -2,16 +2,45 @@
 @use "../functions" as *;
 @use "../mixins" as *;
 
-.root {
-  width: vw(400);
-  padding: vw(20);
+.content {
+  width: vw(310);
+  padding: 40px 0 0;
+
+  @include sp() {
+    width: vw_sp(212);
+    padding: vw_sp(35) 0 0;
+    margin: auto;
+  }
 }
 
-.root + .root {
-  margin: vw(50) 0 0;
+.image {
+  width: 100%;
+  height: vw(208);
+
+  @include sp() {
+    height: vw_sp(138);
+  }
+}
+
+.textBox {
+  margin: 30px 0 0;
+
+  @include sp() {
+    margin: vw_sp(19) 0 0;
+  }
 }
 
 .text {
-  font-size: vw(20);
-  font-weight: 700;
+  font-size: vw(14);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+
+  @include sp() {
+    font-size: vw_sp(14);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+  }
+
+  @include whitespace-pre-wrap();
 }

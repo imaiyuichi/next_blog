@@ -9,7 +9,7 @@ const StaticPage = async () => {
     <div>
       {data.map((item, index) => {
         return (
-          <div key={item.id}>
+          <div key={index}>
             <h2>{item.title}</h2>
             <div>
               <Image

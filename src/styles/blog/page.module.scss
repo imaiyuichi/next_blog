@@ -3,7 +3,12 @@
 @use "../mixins" as *;
 
 .root {
-  width: 1200px;
-  padding: 70px 40px 110px;
+  width: vw(700);
+  padding: 70px 0 110px;
   margin: auto;
+
+  @include sp() {
+    width: 100%;
+    padding: vw_sp(50) vw_sp(20);
+  }
 }

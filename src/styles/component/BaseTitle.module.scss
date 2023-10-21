@@ -1,0 +1,20 @@
+@use "../variables" as *;
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: vw(77);
+  margin: auto;
+
+  @include sp() {
+    height: vw_sp(38);
+  }
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
