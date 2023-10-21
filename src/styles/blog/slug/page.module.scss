@@ -1,0 +1,22 @@
+@use "../../variables" as *;
+@use "../../functions" as *;
+@use "../../mixins" as *;
+
+.root {
+  width: vw(860);
+  padding: 70px 0 110px;
+  margin: auto;
+
+  @include sp() {
+    width: 100%;
+    padding: vw_sp(50) vw_sp(20);
+  }
+}
+
+.time {
+  font-size: vw(18);
+
+  @include sp() {
+    font-size: vw_sp(16);
+  }
+}

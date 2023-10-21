@@ -1,5 +1,4 @@
-import Link from "next/link";
-import AboutMe from "@/src/components/AboutMe";
+import IndexLayout from "../components/IndexLayout";
 import Image from "next/image";
 import style from "@/src/styles/partials/IndexAbout.module.scss";
 
@@ -18,33 +17,34 @@ const IndexAbout = async () => {
     },
     {
       image: {
-        src: about.AboutMe.image_shigeta.url,
-        width: about.AboutMe.image_shigeta.width,
-        height: about.AboutMe.image_shigeta.height,
-      },
-      description: about.AboutMe.description_shigeta,
-    },
-    {
-      image: {
         src: about.AboutMe.image_nakayama.url,
         width: about.AboutMe.image_nakayama.width,
         height: about.AboutMe.image_nakayama.height,
       },
       description: about.AboutMe.description_nakayama,
     },
+    {
+      image: {
+        src: about.AboutMe.image_shigeta.url,
+        width: about.AboutMe.image_shigeta.width,
+        height: about.AboutMe.image_shigeta.height,
+      },
+      description: about.AboutMe.description_shigeta,
+    },
   ];
 
   return (
-    <section>
+    <IndexLayout title="about">
       {aboutMe.map((item, index) => {
         return (
-          <div key={item.index} className={style.root}>
+          <div key={index} className={style.content}>
             <div className={style.image}>
               <Image
                 src={item.image.src}
                 width={item.image.width}
                 height={item.image.height}
                 alt="画像"
+                className="img-full"
               />
             </div>
             <div className={style.textBox}>
@@ -53,7 +53,7 @@ const IndexAbout = async () => {
           </div>
         );
       })}
-    </section>
+    </IndexLayout>
   );
 };
 
