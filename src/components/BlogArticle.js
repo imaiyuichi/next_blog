@@ -1,4 +1,4 @@
-import { getBlog } from "@/app/libs/client";
+import { getBlog } from "@/src/libs/client";
 import Link from "next/link";
 
 const Blog = async () => {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getBlog } from "@/app/libs/client";
+import { getBlog } from "@/src/libs/client";
 import Image from "next/image";
 
 const StaticPage = async () => {

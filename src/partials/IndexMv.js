@@ -1,4 +1,4 @@
-import { getTop } from "@/app/libs/client";
+import { getTop } from "@/src/libs/client";
 
 const Mv = async () => {
   const data = await getTop();

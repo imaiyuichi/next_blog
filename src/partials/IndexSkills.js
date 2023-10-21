@@ -1,9 +1,9 @@
 import Link from "next/link";
-import AboutMe from "@/app/components/AboutMe";
+import AboutMe from "@/src/components/AboutMe";
 import Image from "next/image";
 import style from "@/app/styles/partials/IndexSkills.module.scss";
 
-import { getTop } from "@/app/libs/client";
+import { getTop } from "@/src/libs/client";
 
 const IndexSkills = async () => {
   const skills = await getTop();

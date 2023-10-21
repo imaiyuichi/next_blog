@@ -17,5 +17,5 @@
     "selector-pseudo-element-no-unknown": null,
     "prettier/prettier": null
   },
-  "ignoreFiles": ["node_modules/", "app/**/_destyle.scss"]
+  "ignoreFiles": ["node_modules/", "./**/_destyle.scss"]
 }

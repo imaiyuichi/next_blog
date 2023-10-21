@@ -1,4 +1,4 @@
-import { getBlog } from "@/app/libs/client";
+import { getBlog } from "@/src/libs/client";
 import "@/app/styles/_editor.scss";
 import style from "@/app/styles/blog/page.module.scss";
 
