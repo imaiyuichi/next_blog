@@ -1,6 +1,6 @@
 import { getBlog } from "@/src/libs/client";
-import "@/app/styles/_editor.scss";
-import style from "@/app/styles/blog/page.module.scss";
+import "@/src/styles/_editor.scss";
+import style from "@/src/styles/blog/page.module.scss";
 
 const StaticPage = async (context) => {
   const data = await getBlog();

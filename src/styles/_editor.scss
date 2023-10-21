@@ -1,6 +1,6 @@
-@use "variables" as *;
-@use "functions" as *;
-@use "mixins" as *;
+@use "./variables" as *;
+@use "./functions" as *;
+@use "./mixins" as *;
 
 .editor {
   position: relative;
