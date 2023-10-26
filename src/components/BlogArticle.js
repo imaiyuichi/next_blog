@@ -13,6 +13,7 @@ const Blog = async () => {
           </li>
         ))}
       </ul>
+      <p>test</p>
     </div>
   );
 };
