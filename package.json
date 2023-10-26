@@ -18,6 +18,8 @@
     "*.{html,css,scss,js,json}": "prettier --write"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "html-react-parser": "^4.2.2",
     "microcms-js-sdk": "^2.6.1",
     "next": "13.5.4",

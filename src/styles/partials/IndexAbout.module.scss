@@ -5,6 +5,7 @@
 .content {
   width: vw(310);
   padding: 40px 0 0;
+  font-family: $font-family-termina;
 
   @include sp() {
     width: vw_sp(212);
